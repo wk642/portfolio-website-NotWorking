@@ -3,6 +3,7 @@ body {
   background-color: white;
   font-family: gaegu;
   color: white;
+  font-style: italic;
 }
 
 h1 {
@@ -35,9 +36,11 @@ header {
   text-align: center;
 }
 
-.flex-container {
+.flex-container-bullets {
   display: flex;
   justify-content:space-around;
+  align-items: flex-start;
+  font-size: 18px;
 }
 
 #profile-picture {
