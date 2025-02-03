@@ -1,11 +1,34 @@
 body {
-  background-color: aquamarine;
+  background-image: linear-gradient(white, orange) !important;
+  background-color: white;
   font-family: gaegu;
   color: white;
+  font-style: italic;
+}
+
+h1 {
+  background: -webkit-linear-gradient(white, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 400%;
+}
+
+h2 {
+  background: -webkit-linear-gradient(rgb(155, 155, 155), rgb(68, 63, 63));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 250%;
+  text-align: center;
+}
+
+h3 {
+  background: -webkit-linear-gradient(white, rgb(4, 0, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 180%;
 }
 
 .container {
-  background-color: black;
   margin: 0, auto;
 }
 
@@ -13,42 +36,87 @@ header {
   text-align: center;
 }
 
-h1 {
-  color: orange;
-  font-size: 400%;
-}
-
-h2 {
-  color: grey;
-  font-size: 250%;
-}
-
-h3 {
-  color: blue;
-  font-size: 300%;
-}
-
-#profile-picture {
-  width: 40%;
-  height: 40%;
-  border-radius: 50%;
-  border: rgb(201, 44, 68) solid 10px;
-  margin-top: 5%;
-}
-
-.flex-container {
+.flex-container-bullets {
   display: flex;
   justify-content:space-around;
   align-items: flex-start;
+  font-size: 18px;
 }
 
-.left-column {
-  background-color: orange;
-  width: 30%; 
+#profile-picture {
+  width: 45%;
+  height: 35%;
+  border-radius: 50%;
+  border: rgb(201, 44, 68) solid 8px !important;
+  border: red dashed 10px;
+  margin-top: 1%;
 }
 
-.right-column {
-  background-color: brown;
+.content-left-column {
   width: 70%;
+  padding-right: 2%;
+}
+
+.content-right-column {
+  width: 30%;
+  padding-left: 2%;
 } 
 
+.content-right-column li {
+  font-size: 250%;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skills-flex-container {
+  display: flex;
+  justify-content:space-around;
+  background-color: blue;;
+  flex-direction: x;
+}
+.skills-container {
+  position: relative; 
+  width: 45%;
+  background-color: pink;
+}
+
+.skills-image {
+  opacity: 1;
+  display: inline;
+  width: 60%;
+  transition: .1s ease;
+}
+
+.skills-text-container {
+  transition: .1s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  /* transform: translate(-125%, -125%);
+  -ms-transform: translate(-50%, -50%);  */
+  text-align: center;
+}
+
+.skills-container:hover .skills-image {
+  opacity: 0.3;
+}
+
+.skills-container:hover .skills-text-container {
+  opacity: 1;
+}
+
+.skills-text {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+/* @media screen and (max-width: 480px) {
+  body {
+    background-color: lightgreen !important;
+  }
+} */
